@@ -1,0 +1,12 @@
+.expander {
+    margin-left: -11px !important;
+    margin-right: -2px !important;
+    padding-top: 3px !important;
+    padding-right: 20px !important;
+    padding-left: 0px !important;
+}
+
+#result_list.treeTable .action-select {
+    margin-left: 11px;
+    margin-right: 11px;
+}

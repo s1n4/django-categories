@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django import forms
 from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
 
 from .genericcollection import GenericCollectionTabularInline
 from .settings import RELATION_MODELS, JAVASCRIPT_URL, REGISTER_ADMIN
@@ -63,6 +64,8 @@ class CategoryAdmin(CategoryBaseAdmin):
 
     class Media:
         js = (JAVASCRIPT_URL + 'genericcollections.js',)
+        css = {'all': (settings.STATIC_URL + 'css/expander.css',)}
+
 
 if REGISTER_ADMIN:
     admin.site.register(Category, CategoryAdmin)
